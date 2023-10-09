@@ -4,6 +4,7 @@ const buttons = document.querySelectorAll("#image-picker li");
 const image = document.querySelector("#product-image");
 const changeBatteryColor = document.querySelector(".empty-color");
 const widgets = document.querySelectorAll(".session-container-box");
+//const videos = widgets.querySelectorAll(".session-container-box");
 
 
 /* eventos */
@@ -40,10 +41,9 @@ window.onscroll = () => {
         else if((wgt.getBoundingClientRect().y-document.documentElement.scrollTop) > 800) wgt.classList.add("fade-in-section");
         
         //TÁ QUEBRADO!
-        if(wgt.querySelector(".video")) () => {
-            console.log("Ok!");
+        if (wgt.querySelector(".video") !== null) {
             const video = wgt.querySelector(".video");
-            video.currentTime = 0;
+            if ((wgt.getBoundingClientRect().y-document.documentElement.scrollTop) > 800) video.currentTime = 0;
         }
     });
 }
